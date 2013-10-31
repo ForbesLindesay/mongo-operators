@@ -1,0 +1,580 @@
+{
+  "query-and-projection-operators": {
+    "query-selectors": {
+      "comparison": [
+        {
+          "name": "$gt",
+          "description": "Matches values that are greater than the value specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/gt/#op._S_gt"
+        },
+        {
+          "name": "$gte",
+          "description": "Matches values that are equal to or greater than the value specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/gte/#op._S_gte"
+        },
+        {
+          "name": "$in",
+          "description": "Matches any of the values that exist in an array specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/in/#op._S_in"
+        },
+        {
+          "name": "$lt",
+          "description": "Matches values that are less than the value specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/lt/#op._S_lt"
+        },
+        {
+          "name": "$lte",
+          "description": "Matches values that are less than or equal to the value specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/lte/#op._S_lte"
+        },
+        {
+          "name": "$ne",
+          "description": "Matches all values that are not equal to the value specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/ne/#op._S_ne"
+        },
+        {
+          "name": "$nin",
+          "description": "Matches values that do not exist in an array specified to the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/nin/#op._S_nin"
+        }
+      ],
+      "logical": [
+        {
+          "name": "$or",
+          "description": "Joins query clauses with a logical OR returns all documents that match the conditions of either clause.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/or/#op._S_or"
+        },
+        {
+          "name": "$and",
+          "description": "Joins query clauses with a logical AND returns all documents that match the conditions of both clauses.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/and/#op._S_and"
+        },
+        {
+          "name": "$not",
+          "description": "Inverts the effect of a query expression and returns documents that do not match the query expression.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/not/#op._S_not"
+        },
+        {
+          "name": "$nor",
+          "description": "Joins query clauses with a logical NOR returns all documents that fail to match both clauses.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/nor/#op._S_nor"
+        }
+      ],
+      "element": [
+        {
+          "name": "$exists",
+          "description": "Matches documents that have the specified field.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/exists/#op._S_exists"
+        },
+        {
+          "name": "$type",
+          "description": "Selects documents if a field is of the specified type.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/type/#op._S_type"
+        }
+      ],
+      "evaluation": [
+        {
+          "name": "$mod",
+          "description": "Performs a modulo operation on the value of a field and selects documents with a specified result.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/mod/#op._S_mod"
+        },
+        {
+          "name": "$regex",
+          "description": "Selects documents where values match a specified regular expression.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/regex/#op._S_regex"
+        },
+        {
+          "name": "$where",
+          "description": "Matches documents that satisfy a JavaScript expression.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/where/#op._S_where"
+        }
+      ],
+      "geospatial": [
+        {
+          "name": "$geoWithin",
+          "description": "Selects geometries within a bounding GeoJSON geometry.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/geoWithin/#op._S_geoWithin"
+        },
+        {
+          "name": "$geoIntersects",
+          "description": "Selects geometries that intersect with a GeoJSON geometry.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/geoIntersects/#op._S_geoIntersects"
+        },
+        {
+          "name": "$near",
+          "description": "Returns geospatial objects in proximity to a point.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/near/#op._S_near"
+        },
+        {
+          "name": "$nearSphere",
+          "description": "Returns geospatial objects in proximity to a point on a sphere.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/nearSphere/#op._S_nearSphere"
+        }
+      ],
+      "array": [
+        {
+          "name": "$all",
+          "description": "Matches arrays that contain all elements specified in the query.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/all/#op._S_all"
+        },
+        {
+          "name": "$elemMatch",
+          "description": "Selects documents if element in the array field matches all the specified $elemMatch condition.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/elemMatch/#op._S_elemMatch"
+        },
+        {
+          "name": "$size",
+          "description": "Selects documents if the array field is a specified size.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/query/size/#op._S_size"
+        }
+      ]
+    },
+    "projection-operators": [
+      {
+        "name": "$",
+        "description": "Projects the first element in an array that matches the query condition.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/projection/positional/#proj._S_"
+      },
+      {
+        "name": "$elemMatch",
+        "description": "Projects only the first element from an array that matches the specified $elemMatch condition.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/projection/elemMatch/#proj._S_elemMatch"
+      },
+      {
+        "name": "$slice",
+        "description": "Limits the number of elements projected from an array. Supports skip and limit slices.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/projection/slice/#proj._S_slice"
+      }
+    ]
+  },
+  "update-operators": {
+    "id1": {
+      "fields": [
+        {
+          "name": "$inc",
+          "description": "Increments the value of the field by the specified amount.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/inc/#up._S_inc"
+        },
+        {
+          "name": "$rename",
+          "description": "Renames a field.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/rename/#up._S_rename"
+        },
+        {
+          "name": "$setOnInsert",
+          "description": "Sets the value of a field upon documentation creation during an upsert. Has no effect on update operations that modify existing documents.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/setOnInsert/#up._S_setOnInsert"
+        },
+        {
+          "name": "$set",
+          "description": "Sets the value of a field in an existing document.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/set/#up._S_set"
+        },
+        {
+          "name": "$unset",
+          "description": "Removes the specified field from an existing document.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/unset/#up._S_unset"
+        }
+      ],
+      "array": {
+        "operators": [
+          {
+            "name": "$",
+            "description": "Acts as a placeholder to update the first element that matches the query condition in an update.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/positional/#op._S_"
+          },
+          {
+            "name": "$addToSet",
+            "description": "Adds elements to an existing array only if they do not already exist in the set.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/addToSet/#up._S_addToSet"
+          },
+          {
+            "name": "$pop",
+            "description": "Removes the first or last item of an array.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/pop/#up._S_pop"
+          },
+          {
+            "name": "$pullAll",
+            "description": "Removes multiple values from an array.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/pullAll/#up._S_pullAll"
+          },
+          {
+            "name": "$pull",
+            "description": "Removes items from an array that match a query statement.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/pull/#up._S_pull"
+          },
+          {
+            "name": "$pushAll",
+            "description": "Deprecated. Adds several items to an array.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/pushAll/#up._S_pushAll"
+          },
+          {
+            "name": "$push",
+            "description": "Adds an item to an array.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/push/#up._S_push"
+          }
+        ],
+        "modifiers": [
+          {
+            "name": "$each",
+            "description": "Modifies the $push and $addToSet operators to append multiple items for array updates.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/each/#up._S_each"
+          },
+          {
+            "name": "$slice",
+            "description": "Modifies the $push operator to limit the size of updated arrays.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/slice/#up._S_slice"
+          },
+          {
+            "name": "$sort",
+            "description": "Modifies the $push operator to reorder documents stored in an array.",
+            "href": "http://docs.mongodb.org/manual/reference/operator/update/sort/#up._S_sort"
+          }
+        ]
+      },
+      "bitwise": [
+        {
+          "name": "$bit",
+          "description": "Performs bitwise AND and OR updates of integer values.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/bit/#up._S_bit"
+        }
+      ],
+      "isolation": [
+        {
+          "name": "$isolated",
+          "description": "Modifies behavior of multi-updates to improve the isolation of the operation.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/update/isolated/#up._S_isolated"
+        }
+      ]
+    }
+  },
+  "aggregation-framework-operators": {
+    "pipeline-operators": [
+      {
+        "name": "$project",
+        "description": "Reshapes a document stream. $project can rename, add, or remove fields as well as create computed values and sub-documents.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/project/#pipe._S_project"
+      },
+      {
+        "name": "$match",
+        "description": "Filters the document stream, and only allows matching documents to pass into the next pipeline stage. $match uses standard MongoDB queries.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/match/#pipe._S_match"
+      },
+      {
+        "name": "$limit",
+        "description": "Restricts the number of documents in an aggregation pipeline.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/limit/#pipe._S_limit"
+      },
+      {
+        "name": "$skip",
+        "description": "Skips over a specified number of documents from the pipeline and returns the rest.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/skip/#pipe._S_skip"
+      },
+      {
+        "name": "$unwind",
+        "description": "Takes an array of documents and returns them as a stream of documents.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/unwind/#pipe._S_unwind"
+      },
+      {
+        "name": "$group",
+        "description": "Groups documents together for the purpose of calculating aggregate values based on a collection of documents.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/group/#pipe._S_group"
+      },
+      {
+        "name": "$sort",
+        "description": "Takes all input documents and returns them in a stream of sorted documents.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/sort/#pipe._S_sort"
+      },
+      {
+        "name": "$geoNear",
+        "description": "Returns an ordered stream of documents based on proximity to a geospatial point.",
+        "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/geoNear/#pipe._S_geoNear"
+      }
+    ],
+    "expression-operators": {
+      "group-operators": [
+        {
+          "name": "$addToSet",
+          "description": "Returns an array of all the unique values for the selected field among for each document in that group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/addToSet/#grp._S_addToSet"
+        },
+        {
+          "name": "$first",
+          "description": "Returns the first value in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/first/#grp._S_first"
+        },
+        {
+          "name": "$last",
+          "description": "Returns the last value in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/last/#grp._S_last"
+        },
+        {
+          "name": "$max",
+          "description": "Returns the highest value in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/max/#grp._S_max"
+        },
+        {
+          "name": "$min",
+          "description": "Returns the lowest value in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/min/#grp._S_min"
+        },
+        {
+          "name": "$avg",
+          "description": "Returns an average of all the values in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/avg/#grp._S_avg"
+        },
+        {
+          "name": "$push",
+          "description": "Returns an array of all values for the selected field among for each document in that group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/push/#grp._S_push"
+        },
+        {
+          "name": "$sum",
+          "description": "Returns the sum of all the values in a group.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/sum/#grp._S_sum"
+        }
+      ],
+      "boolean-operators": [
+        {
+          "name": "$and",
+          "description": "Returns true only when all values in its input array are true.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/and/#exp._S_and"
+        },
+        {
+          "name": "$or",
+          "description": "Returns true when any value in its input array are true.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/or/#exp._S_or"
+        },
+        {
+          "name": "$not",
+          "description": "Returns the boolean value that is the opposite of the input value.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/not/#exp._S_not"
+        }
+      ],
+      "comparison-operators": [
+        {
+          "name": "$cmp",
+          "description": "Compares two values and returns the result of the comparison as an integer.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/cmp/#exp._S_cmp"
+        },
+        {
+          "name": "$eq",
+          "description": "Takes two values and returns true if the values are equivalent.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/eq/#exp._S_eq"
+        },
+        {
+          "name": "$gt",
+          "description": "Takes two values and returns true if the first is larger than the second.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/gt/#exp._S_gt"
+        },
+        {
+          "name": "$gte",
+          "description": "Takes two values and returns true if the first is larger than or equal to the second.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/gte/#exp._S_gte"
+        },
+        {
+          "name": "$lt",
+          "description": "Takes two values and returns true if the second value is larger than the first.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/lt/#exp._S_lt"
+        },
+        {
+          "name": "$lte",
+          "description": "Takes two values and returns true if the second value is larger than or equal to the first.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/lte/#exp._S_lte"
+        },
+        {
+          "name": "$ne",
+          "description": "Takes two values and returns true if the values are not equivalent.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/ne/#exp._S_ne"
+        }
+      ],
+      "arithmetic-operators": [
+        {
+          "name": "$add",
+          "description": "Computes the sum of an array of numbers.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/add/#exp._S_add"
+        },
+        {
+          "name": "$divide",
+          "description": "Takes two numbers and divides the first number by the second.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/divide/#exp._S_divide"
+        },
+        {
+          "name": "$mod",
+          "description": "Takes two numbers and calcualtes the modulo of the first number divided by the second.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/mod/#exp._S_mod"
+        },
+        {
+          "name": "$multiply",
+          "description": "Computes the product of an array of numbers.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/multiply/#exp._S_multiply"
+        },
+        {
+          "name": "$subtract",
+          "description": "Takes two numbers and subtracts the second number from the first.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/subtract/#exp._S_subtract"
+        }
+      ],
+      "string-operators": [
+        {
+          "name": "$concat",
+          "description": "Concatenates two strings.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/concat/#exp._S_concat"
+        },
+        {
+          "name": "$strcasecmp",
+          "description": "Compares two strings and returns an integer that reflects the comparison.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/strcasecmp/#exp._S_strcasecmp"
+        },
+        {
+          "name": "$substr",
+          "description": "Takes a string and returns portion of that string.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/substr/#exp._S_substr"
+        },
+        {
+          "name": "$toLower",
+          "description": "Converts a string to lowercase.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/toLower/#exp._S_toLower"
+        },
+        {
+          "name": "$toUpper",
+          "description": "Converts a string to uppercase.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/toUpper/#exp._S_toUpper"
+        }
+      ],
+      "date-operators": [
+        {
+          "name": "$dayOfYear",
+          "description": "Converts a date to a number between 1 and 366.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/dayOfYear/#exp._S_dayOfYear"
+        },
+        {
+          "name": "$dayOfMonth",
+          "description": "Converts a date to a number between 1 and 31.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/dayOfMonth/#exp._S_dayOfMonth"
+        },
+        {
+          "name": "$dayOfWeek",
+          "description": "Converts a date to a number between 1 and 7.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/dayOfWeek/#exp._S_dayOfWeek"
+        },
+        {
+          "name": "$year",
+          "description": "Converts a date to the full year.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/year/#exp._S_year"
+        },
+        {
+          "name": "$month",
+          "description": "Converts a date into a number between 1 and 12.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/month/#exp._S_month"
+        },
+        {
+          "name": "$week",
+          "description": "Converts a date into a number between 0 and 53",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/week/#exp._S_week"
+        },
+        {
+          "name": "$hour",
+          "description": "Converts a date into a number between 0 and 23.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/hour/#exp._S_hour"
+        },
+        {
+          "name": "$minute",
+          "description": "Converts a date into a number between 0 and 59.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/minute/#exp._S_minute"
+        },
+        {
+          "name": "$second",
+          "description": "Converts a date into a number between 0 and 59. May be 60 to account for leap seconds.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/second/#exp._S_second"
+        },
+        {
+          "name": "$millisecond",
+          "description": "Returns the millisecond portion of a date as an integer between 0 and 999.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/millisecond/#exp._S_millisecond"
+        }
+      ],
+      "conditional-expressions": [
+        {
+          "name": "$cond",
+          "description": "A ternary operator that evaluates one expression, and depending on the result returns the value of one following expressions.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/cond/#exp._S_cond"
+        },
+        {
+          "name": "$ifNull",
+          "description": "Evaluates an expression and returns a value.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/aggregation/ifNull/#exp._S_ifNull"
+        }
+      ]
+    }
+  },
+  "query-modifiers": {
+    "introduction": [],
+    "operators": {
+      "modifiers": [
+        {
+          "name": "$comment",
+          "description": "Adds a comment to the query to identify queries in the database profiler output.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/comment/#op._S_comment"
+        },
+        {
+          "name": "$explain",
+          "description": "Forces MongoDB to report on query execution plans. See explain().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/explain/#op._S_explain"
+        },
+        {
+          "name": "$hint",
+          "description": "Forces MongoDB to use a specific index. See hint()",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/hint/#op._S_hint"
+        },
+        {
+          "name": "$maxScan",
+          "description": "Limits the number of documents a cursor will return for a query. See limit().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/maxScan/#op._S_maxScan"
+        },
+        {
+          "name": "$max",
+          "description": "Specifies a minimum exclusive upper limit for the index to use in a query. See max().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/max/#op._S_max"
+        },
+        {
+          "name": "$min",
+          "description": "Specifies a minimum inclusive lower limit for the index to use in a query. See min().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/min/#op._S_min"
+        },
+        {
+          "name": "$orderby",
+          "description": "Returns a cursor with documents sorted according to a sort specification. See sort().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/orderby/#op._S_orderby"
+        },
+        {
+          "name": "$returnKey",
+          "description": "Forces the cursor to only return fields included in the index.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/returnKey/#op._S_returnKey"
+        },
+        {
+          "name": "$showDiskLoc",
+          "description": "Modifies the documents returned to include references to the on-disk location of each document.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/showDiskLoc/#op._S_showDiskLoc"
+        },
+        {
+          "name": "$snapshot",
+          "description": "Forces the query to use the index on the _id field. See snapshot().",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/snapshot/#op._S_snapshot"
+        },
+        {
+          "name": "$query",
+          "description": "Wraps a query document.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/query/#op._S_query"
+        }
+      ],
+      "sort-order": [
+        {
+          "name": "$natural",
+          "description": "A special sort order that orders documents using the order of documents on disk.",
+          "href": "http://docs.mongodb.org/manual/reference/operator/meta/natural/#op._S_natural"
+        }
+      ]
+    }
+  }
+}
