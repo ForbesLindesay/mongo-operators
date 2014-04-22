@@ -2,9 +2,9 @@
 
 Structured description of MongoDB's operators
 
-[![Build Status](https://travis-ci.org/ForbesLindesay/mongo-operators.png?branch=master)](https://travis-ci.org/ForbesLindesay/mongo-operators)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/mongo-operators.png)](https://gemnasium.com/ForbesLindesay/mongo-operators)
-[![NPM version](https://badge.fury.io/js/mongo-operators.png)](http://badge.fury.io/js/mongo-operators)
+[![Build Status](https://img.shields.io/travis/ForbesLindesay/mongo-operators/master.svg)](https://travis-ci.org/ForbesLindesay/mongo-operators)
+[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/mongo-operators.svg)](https://gemnasium.com/ForbesLindesay/mongo-operators)
+[![NPM version](https://img.shields.io/npm/v/mongo-operators.svg)](http://badge.fury.io/js/mongo-operators)
 
 ## Installation
 
