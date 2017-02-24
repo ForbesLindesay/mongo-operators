@@ -1,5 +1,7 @@
 # mongo-operators
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/mongo-operators.svg)](https://greenkeeper.io/)
+
 Structured description of MongoDB's operators
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/mongo-operators/master.svg)](https://travis-ci.org/ForbesLindesay/mongo-operators)
